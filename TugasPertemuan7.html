@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2b00d7;
+            padding: 20px;
+        }
+
+        .form-container {
+            background-color: #fffefc; /* Warna latar krem/cokelat muda sesuai gambar */
+            width: 450px;
+            padding: 20px 30px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 6px 0;
+            vertical-align: top;
+        }
+
+        td:first-child {
+            width: 120px;
+            font-weight: normal;
+        }
+
+        input[type="text"], select, textarea {
+            width: 90%;
+            padding: 4px;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        textarea {
+            height: 50px;
+            resize: vertical;
+        }
+
+        .button-group {
+            margin-top: 15px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            padding: 4px 12px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Form Pendaftaran</h2>
+        
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td><label for="nim">NIM</label></td>
+                    <td><input type="text" id="nim" name="nim"></td>
+                </tr>
+                <tr>
+                    <td><label for="nama">Nama</label></td>
+                    <td><input type="text" id="nama" name="nama"></td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>
+                        <input type="radio" id="jk_l" name="jenis_kelamin" value="Laki-laki">
+                        <label for="jk_l">Laki-laki</label>
+                        <input type="radio" id="jk_p" name="jenis_kelamin" value="Perempuan">
+                        <label for="jk_p">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="agama">Agama</label></td>
+                    <td>
+                        <select id="agama" name="agama">
+                            <option value="">--Pilih--</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Buddha">Buddha</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        <input type="radio" id="st_kawin" name="status" value="Kawin">
+                        <label for="st_kawin">Kawin</label>
+                        <input type="radio" id="st_belum" name="status" value="Belum Kawin">
+                        <label for="st_belum">Belum Kawin</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="jurusan">Jurusan</label></td>
+                    <td>
+                        <select id="jurusan" name="jurusan">
+                            <option value="">--Pilih--</option>
+                            <option value="Teknik Informatika">Teknik Informatika</option>
+                            <option value="Sistem Informasi">Sistem Informasi</option>
+                            <option value="Manajemen Informatika">Manajemen Informatika</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobi</td>
+                    <td>
+                        <input type="checkbox" id="hb_bola" name="hobi[]" value="Sepak bola">
+                        <label for="hb_bola">Sepak bola</label>
+                        <input type="checkbox" id="hb_renang" name="hobi[]" value="Renang">
+                        <label for="hb_renang">Renang</label>
+                        <input type="checkbox" id="hb_traveling" name="hobi[]" value="Traveling">
+                        <label for="hb_traveling">Traveling</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="keterangan">Keterangan</label></td>
+                    <td>
+                        <textarea id="keterangan" name="keterangan"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="button-group">
+                            <input type="submit" value="Kirim">
+                            <input type="reset" value="Ulang">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+</body>
+</html>
